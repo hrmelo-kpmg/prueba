@@ -2,28 +2,6 @@
     "Description": "This template creates the resources required for a sample AWS CodeDeploy blue/green deployment. **WARNING** This template creates one or more Amazon EC2 instances. You will be billed for the AWS resources created by this template.",
     "AWSTemplateFormatVersion": "2010-09-09",
     "Parameters": {
-        "LoadBalancerName": {
-            "Description": "The name of the load balancer.",
-            "Type": "String",
-            "MinLength": "1",
-            "MaxLength": "32",
-            "ConstraintDescription": "Must contain only alphanumeric characters or hyphens, and cannot begin or end with a hyphen. Must have a maximum of 32 characters."
-        },
-        "ServiceRoleName": {
-            "Description": "The name of the service role.",
-            "Type": "String",
-            "MinLength": "1",
-            "MaxLength": "64",
-            "ConstraintDescription": "Must contain only alphanumeric characters or hyphens, and cannot begin or end with a hyphen."
-        },
-        "KeyPairName": {
-            "Description": "Name of an existing Amazon EC2 key pair to enable SSH or RDP access to the instances.",
-            "Type": "String",
-            "MinLength": "1",
-            "MaxLength": "255",
-            "AllowedPattern": "[\\x20-\\x7E]*",
-            "ConstraintDescription": "Can contain only ASCII characters."
-        },
         "InstanceCount": {
             "Description": "Number of Amazon EC2 instances in an autoscaling group.",
             "Type": "Number",
